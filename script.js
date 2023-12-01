@@ -1,6 +1,6 @@
 const user = JSON.parse(localStorage.getItem("user"));
 if(!user){
-    document.location.href="/index.html";
+    document.location.href="./index.html";
 }
 console.log(user);
 console.log(JSON.stringify(user));
@@ -13,7 +13,7 @@ const timezone = document.getElementById("timezone");
 const token = document.getElementById("token");
 document.getElementById("logout").addEventListener("click",()=>{
     localStorage.clear();
-    document.location.href="/index.html";
+    document.location.href="./index.html";
 })
 if(user.email){
     email.innerHTML=`<p>Email : ${user.email.email}</p><p>Email Name : ${user.email.name}</p>`
