@@ -25,12 +25,12 @@
     <script type="text/javascript">
       const user = JSON.parse(localStorage.getItem("user"));
       if(user){
-        document.location.href="./index.html";
+        document.location.href="./dashboard.html";
       }
         function otpless(otplessUser) {
           console.log(JSON.stringify(otplessUser));
           localStorage.setItem("user",JSON.stringify(otplessUser));
-          document.location.href="/dashboard.html";
+          document.location.href="./dashboard.html";
         }
       </script>
   </body>
