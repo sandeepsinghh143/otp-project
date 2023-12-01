@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+        <div>Welcome</div>
+        <div>
+            <a href="/">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+    <div class="main">
+        <div id="otpless-login-page">
+        </div>
+        <script type="text/javascript" src="https://otpless.com/auth.js"></script>
+    </div>
+    
+    <script type="text/javascript">
+      const user = JSON.parse(localStorage.getItem("user"));
+      if(user){
+        document.location.href="/dashboard.html";
+      }
+        function otpless(otplessUser) {
+          console.log(JSON.stringify(otplessUser));
+          localStorage.setItem("user",JSON.stringify(otplessUser));
+          document.location.href="/dashboard.html";
+        }
+      </script>
+  </body>
+</html>
